@@ -1,22 +1,16 @@
-# еЈ°жЋи¦Ѓж±‚зљ„ cmake жњЂдЅЋз‰€жњ¬
+# «Е§i­nЁDЄє cmake іМ§CЄ©Ґ»
 cmake_minimum_required(VERSION 2.8)
 
-# еЈ°жЋдёЂдёЄ cmake е·ҐзЁ‹
-project(HelloSLAM)
+# «Е§i¤@­У cmake ±M®Ч
+project(HelloSlam)
 
-# и®ѕзЅ®зј–иЇ‘жЁЎејЏ
 set(CMAKE_BUILD_TYPE "Debug")
 
-# ж·»еЉ дёЂдёЄеЏЇж‰§иЎЊзЁ‹еєЏ
-# иЇ­жі•пјљadd_executable( зЁ‹еєЏеђЌ жєђд»Јз Ѓж–‡д»¶ пј‰
-add_executable(helloSLAM helloSLAM.cpp)
+# ІKҐ[Ґi°х¦жµ{¦Ў
+add_executable(hello_slam main.cpp)
 
-# ж·»еЉ helloеє“
-add_library(hello libHelloSLAM.cpp)
-# е…±дє«еє“
-add_library(hello_shared SHARED libHelloSLAM.cpp)
+# ІKҐ[ЁзјЖ®w(library)
+add_library(hello hello.cpp)
 
-# ж·»еЉ еЏЇж‰§иЎЊзЁ‹еєЏи°ѓз”Ёhelloеє“дё­е‡Ѕж•°
-add_executable(useHello useHello.cpp)
-# е°†еє“ж–‡д»¶й“ѕжЋҐе€°еЏЇж‰§иЎЊзЁ‹еєЏдёЉ
-target_link_libraries(useHello hello_shared)
+# ±N'Ґi°х¦жµ{¦Ў'»P'­nЁПҐОЄєЁз¦Ў®w'БеµІ°_ЁУ
+target_link_libraries(hello_slam hello)
